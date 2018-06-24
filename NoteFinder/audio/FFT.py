@@ -53,9 +53,14 @@ class FFT:
 
     #finds frequency with highest amplitude
 
-    def max_freq(self):
-        freq_max = np.argmax(self.amplitude_array)
-        amplitude = self.amplitude_array[freq_max]
+    def max_freq(self, amp_array=None):
+        if type(amp_array).__module__ == "builtins":
+            amp_array = self.amplitude_array
+
+        print(amp_array[:25])
+
+        freq_max = np.argmax(amp_array)
+        amplitude = amp_array[freq_max]
 
         print("The frequency is {} Hz".format(freq_max))
         print("The amplitude is {} Hz".format(amplitude))
@@ -64,7 +69,9 @@ class FFT:
 
 
 
-    def filter_out_freq_range(self, freq_range):
+    def filter_out_freq_range(self, freq_range, amp_array=None):
+        if type(amp_array).__module__ == "builtins":
+            amp_array = self.amplitude_array
 
         # for i in range(cols):
         #
@@ -81,7 +88,7 @@ class FFT:
                              freq_range[7, 0] <= index <= freq_range[7, 1] or
                              freq_range[8, 0] <= index <= freq_range[8, 1] or
                              freq_range[9, 0] <= index <= freq_range[9, 1]
-                        else f for index, f in enumerate(self.amplitude_array)], dtype=float16)
+                        else f for index, f in enumerate(amp_array)], dtype=float16)
 
         # fft_masked = np.ma.masked_equal(fft_filtered, 0.0)
         return fft_filtered
@@ -93,69 +100,4 @@ class FFT:
 
 
 
-# D = np.array([
-#  [17.83154388,   18.89186265],
-#  [35.66308775,   37.78372531],
-#  [71.32617551,  75.56745061],
-#  [142.65235101,  151.13490122],
-#  [285.30470202,  302.26980244],
-#  [570.60940405,  604.53960488],
-#  [1141.21880809, 1209.07920976],
-#  [2282.43761619, 2418.15841953],
-#  [4564.87523237, 4836.31683905],
-#  [9129.75046474, 9672.6336781]])
-#
-# G = np.array([
-#  [23.80225543,    25.21761119],
-#  [47.60451086,   50.43522238],
-#  [95.20902171,   100.87044475],
-#  [190.41804342,   201.74088951],
-#  [380.83608684,   403.48177901],
-#  [761.67217369,   806.96355802],
-#  [1523.34434737,  1613.92711604],
-#  [3046.68869474,  3227.85423208],
-#  [6093.37738948,  6455.70846416],
-#  [12186.75477897, 12911.41692832]])
-#
-# B = np.array([
-#  [29.98896265,    31.77219916],
-#  [59.9779253,     63.54439833],
-#  [119.95585059,   127.08879666],
-#  [239.91170119,   254.17759331],
-#  [479.82340237,  508.35518662],
-#  [959.64680475,  1016.71037325],
-#  [1919.29360949,  2033.4207465],
-#  [3838.58721898,  4066.84149299],
-#  [7677.17443796,  8133.68298598],
-#  [15354.34887593, 16267.36597196]])
-#
-# amp_array = wav_to_amp_array(wav_file_test)
-#
-# D_filtered = filter_out_freq_range(D, amp_array)
-# D_filtered2 = max_freq(D_filtered)
-#
-# print(D_filtered[18])
-# print(D_filtered[36])
-# print(D_filtered[74])
-# print(D_filtered[147])
-# print(D_filtered[294])
-# print(D_filtered[588])
-# print(D_filtered[1175])
-# print(D_filtered[2350])
-# print(D_filtered[4699])
-#
-# G_filtered = filter_out_freq_range(G, D_filtered)
-# G_filtered2 = max_freq(G_filtered)
-#
-# B_filtered = filter_out_freq_range(B, G_filtered)
-# B_filtered2 = max_freq(B_filtered)
 
-
-
-# Z = np.array([-117.25, -114.375, -106.5, -113.4375, -114.0625, -113.6875, -119.75, -109.625,
-#  -106.25, -100.1875, -94.25, -94.4375, -96.6875, -100.4375, -98.6875, -94.875,
-#  -89.75, -87.5625, -93.6875])
-#
-# fft_masked = np.ma.masked_equal(Z, -94.4375)
-#
-# print(np.argmax(fft_masked))
