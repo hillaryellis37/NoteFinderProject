@@ -5,6 +5,7 @@ from NoteFinder.audio.freq_to_note_converter import Note
 
 
 wav_file_test = './NoteFinder/media/Gmaj.wav'
+notes = ""
 
 def main():
 
@@ -50,7 +51,10 @@ def main():
     note4, freq_range4, freq_range_all4 = fnote_converter.run(loudest_freq4)
 
 
+    notes = note1[:-1] + " " + note2[:-1] + " " + note3[:-1]
 
+    chord = fnote_converter.chord(notes)
+    print(chord)
 
 if __name__ == "__main__":
     main()
