@@ -12,7 +12,7 @@ class FFT:
     def __init__(self, input_file):
 
         self.input_file = input_file
-        self.amplitude_array = []
+        self.amplitude_array = np.array([-100.0])
 
         # parse wav file
         self.fs, self.dats = wav.read(self.input_file)
@@ -39,25 +39,31 @@ class FFT:
 
         self.freqArray = (arange(0, self.nUniquePts, 1.0) * (self.fs / self.data_length)).astype(np.int64)
 
-        plot(self.freqArray, 10*log10(self.fft_out), color='k')
+
+        # plot(self.freqArray, 10*log10(self.fft_out), color='k')
+        # xlabel('Frequency (kHz)')
+        # ylabel('Power (dB)')
+        # show()
+
+
+
+        for i in np.arange(1, 20001):
+            self.amplitude_array = np.append(self.amplitude_array, np.array([(10 * log10(self.fft_out)[np.searchsorted(self.freqArray, i)])]))
+
+        self.amplitude_array = np.around(self.amplitude_array, decimals=5)
+
+        plot(np.arange(20001), self.amplitude_array, color='k')
         xlabel('Frequency (kHz)')
         ylabel('Power (dB)')
         show()
 
-        for i in np.arange(0, 20001):
-
-            self.amplitude_array.append(10*log10(self.fft_out)[np.searchsorted(self.freqArray, i)])
-
-
-
-
     #finds frequency with highest amplitude
 
     def max_freq(self, amp_array=None):
+
         if type(amp_array).__module__ == "builtins":
             amp_array = self.amplitude_array
 
-        print(amp_array[:25])
 
         freq_max = np.argmax(amp_array)
         amplitude = amp_array[freq_max]
@@ -88,7 +94,7 @@ class FFT:
                              freq_range[7, 0] <= index <= freq_range[7, 1] or
                              freq_range[8, 0] <= index <= freq_range[8, 1] or
                              freq_range[9, 0] <= index <= freq_range[9, 1]
-                        else f for index, f in enumerate(amp_array)], dtype=float16)
+                        else f for index, f in enumerate(amp_array)])
 
         # fft_masked = np.ma.masked_equal(fft_filtered, 0.0)
         return fft_filtered
