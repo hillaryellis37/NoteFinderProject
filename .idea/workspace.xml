@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d0f96d77-43db-44e7-b094-c9b192a8ddb6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/NoteFinder/plotting/__init__.py" afterPath="$PROJECT_DIR$/NoteFinder/plotting/__init__.py" />
       <change beforePath="$PROJECT_DIR$/NoteFinder/plotting/bullseye_plot.py" afterPath="$PROJECT_DIR$/NoteFinder/plotting/bullseye_plot.py" />
+      <change beforePath="$PROJECT_DIR$/note_finder.py" afterPath="$PROJECT_DIR$/note_finder.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,8 +18,8 @@
     <SUITE FILE_PATH="coverage/NoteFinderProject$run_FFT.coverage" NAME="run_FFT Coverage Results" MODIFIED="1529789290564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NoteFinder/audio" />
     <SUITE FILE_PATH="coverage/NoteFinderProject$run_plot_practice.coverage" NAME="run_plot_practice Coverage Results" MODIFIED="1529883822887" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NoteFinder/plotting" />
     <SUITE FILE_PATH="coverage/NoteFinderProject$run_freq_to_note.coverage" NAME="run_freq_to_note Coverage Results" MODIFIED="1529784770077" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NoteFinder/audio" />
-    <SUITE FILE_PATH="coverage/NoteFinderProject$run_main.coverage" NAME="run_main Coverage Results" MODIFIED="1529820742152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/NoteFinderProject$run_bullseye.coverage" NAME="run_bullseye Coverage Results" MODIFIED="1529891468264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NoteFinder/plotting" />
+    <SUITE FILE_PATH="coverage/NoteFinderProject$run_main.coverage" NAME="run_main Coverage Results" MODIFIED="1529894227571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NoteFinderProject$run_bullseye.coverage" NAME="run_bullseye Coverage Results" MODIFIED="1529891666650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NoteFinder/plotting" />
     <SUITE FILE_PATH="coverage/FrequencyExtractor$run_note_converter.coverage" NAME="run_note_converter Coverage Results" MODIFIED="1529044741557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/NoteFinderProject$run_fft2.coverage" NAME="run_freq_to_note Coverage Results" MODIFIED="1529344474290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NoteFinder/audio" />
     <SUITE FILE_PATH="coverage/NoteFinderProject$run_plot.coverage" NAME="run_plot Coverage Results" MODIFIED="1529878569829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NoteFinder/plotting" />
@@ -44,7 +46,7 @@
       <file leaf-file-name="FFT.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NoteFinder/audio/FFT.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1119">
+            <state relative-caret-position="-1114">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="e#1#19#0" expanded="true" />
@@ -53,14 +55,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="note_finder.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="note_finder.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/note_finder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="56" column="15" lean-forward="false" selection-start-line="56" selection-start-column="15" selection-end-line="56" selection-end-column="15" />
+            <state relative-caret-position="219">
+              <caret line="26" column="21" lean-forward="false" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
-                <marker date="1529820742141" expanded="true" signature="664:820" ph="..." />
+                <marker date="1529894227555" expanded="true" signature="757:913" ph="..." />
               </folding>
             </state>
           </provider>
@@ -78,13 +80,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bullseye_plot.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bullseye_plot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NoteFinder/plotting/bullseye_plot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="109" column="38" lean-forward="false" selection-start-line="109" selection-start-column="38" selection-end-line="109" selection-end-column="38" />
+            <state relative-caret-position="515">
+              <caret line="103" column="29" lean-forward="false" selection-start-line="103" selection-start-column="29" selection-end-line="103" selection-end-column="29" />
               <folding>
-                <element signature="e#146#164#0" expanded="true" />
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -128,7 +130,7 @@
         <entry file="file://$PROJECT_DIR$/NoteFinder/plotting/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -137,8 +139,8 @@
       <file leaf-file-name="freq_to_note_converter.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NoteFinder/audio/freq_to_note_converter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="72" />
+            <state relative-caret-position="-552">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -150,7 +152,7 @@
         <entry file="file://$PROJECT_DIR$/NoteFinder/audio/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="33" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -174,16 +176,16 @@
       <find>fft_out</find>
       <find>amp_array1</find>
       <find>max</find>
-      <find>print</find>
       <find>sublot</find>
       <find>s</find>
       <find>subpl</find>
       <find>ax</find>
-      <find>input_freq</find>
       <find>segbold</find>
       <find>size</find>
       <find>768</find>
       <find>q</find>
+      <find>input_freq</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -200,10 +202,11 @@
         <option value="$PROJECT_DIR$/NoteFinder/audio/__init__.py" />
         <option value="$PROJECT_DIR$/NoteFinder/audio/freq_to_note_converter.py" />
         <option value="$PROJECT_DIR$/NoteFinder/audio/FFT.py" />
-        <option value="$PROJECT_DIR$/note_finder.py" />
         <option value="$PROJECT_DIR$/NoteFinder/plotting/plot_practice.py" />
         <option value="$PROJECT_DIR$/NoteFinder/plotting/plot.py" />
+        <option value="$PROJECT_DIR$/NoteFinder/plotting/__init__.py" />
         <option value="$PROJECT_DIR$/NoteFinder/plotting/bullseye_plot.py" />
+        <option value="$PROJECT_DIR$/note_finder.py" />
       </list>
     </option>
   </component>
@@ -338,7 +341,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.run_bullseye">
+  <component name="RunManager" selected="Python.run_main">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -855,60 +858,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NoteFinder/audio/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/note_finder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="56" column="15" lean-forward="false" selection-start-line="56" selection-start-column="15" selection-end-line="56" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <marker date="1529820742141" expanded="true" signature="664:820" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NoteFinder/plotting/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NoteFinder/audio/FFT.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1119">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#1#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/numpy/lib/stride_tricks.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-21">
           <caret line="183" column="0" lean-forward="false" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NoteFinder/audio/freq_to_note_converter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="72" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -922,6 +876,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/NoteFinder/audio/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NoteFinder/plotting/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/NoteFinder/plotting/plot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -932,12 +904,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/NoteFinder/audio/freq_to_note_converter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-552">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NoteFinder/audio/FFT.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1114">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#1#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/NoteFinder/plotting/bullseye_plot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="109" column="38" lean-forward="false" selection-start-line="109" selection-start-column="38" selection-end-line="109" selection-end-column="38" />
+        <state relative-caret-position="515">
+          <caret line="103" column="29" lean-forward="false" selection-start-line="103" selection-start-column="29" selection-end-line="103" selection-end-column="29" />
           <folding>
-            <element signature="e#146#164#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/note_finder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="26" column="21" lean-forward="false" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1529894227555" expanded="true" signature="757:913" ph="..." />
           </folding>
         </state>
       </provider>

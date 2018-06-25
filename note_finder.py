@@ -2,6 +2,7 @@ import argparse
 import numpy as np
 from NoteFinder.audio.FFT import FFT
 from NoteFinder.audio.freq_to_note_converter import Note
+from NoteFinder.plotting.bullseye_plot import Plot
 
 
 wav_file_test = './NoteFinder/media/Gmaj.wav'
@@ -20,6 +21,10 @@ def main():
 
     # create FFT object
     # fa_array= FFT(input_file=args.input_file)
+
+    plot = Plot()
+
+    plot.start_plot()
     fa_array = FFT(input_file=wav_file_test)
 
 
