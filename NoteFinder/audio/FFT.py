@@ -48,14 +48,14 @@ class FFT:
 
 
         for i in np.arange(1, 20001):
-            self.amplitude_array = np.append(self.amplitude_array, np.array([(10 * log10(self.fft_out)[np.searchsorted(self.freqArray, i)])]))
+            self.amplitude_array = np.append(self.amplitude_array, np.array([(10 * log10(self.fft_out)[np.searchsorted(self.freqArray, i)+3])]))
 
         self.amplitude_array = np.around(self.amplitude_array, decimals=5)
 
-        plot(np.arange(20001), self.amplitude_array, color='k')
-        xlabel('Frequency (kHz)')
-        ylabel('Power (dB)')
-        show()
+        # plot(np.arange(20001), self.amplitude_array, color='k')
+        # xlabel('Frequency (kHz)')
+        # ylabel('Power (dB)')
+        # show()
 
     #finds frequency with highest amplitude
 
@@ -79,10 +79,15 @@ class FFT:
         if type(amp_array).__module__ == "builtins":
             amp_array = self.amplitude_array
 
+        note_amp_list=[]
+
+
         # for i in range(cols):
         #
         # # for j in range(len(fft_array)):
         #     fft_masked = np.array([0 if freq_range[i, 0] <= index <= freq_range[i, 1] else f for index, f in enumerate(fft_array)], dtype=float16)
+
+
 
         fft_filtered = np.array([-1000.0 if freq_range[0, 0] <= index <= freq_range[0, 1] or
                              freq_range[1, 0] <= index <= freq_range[1, 1] or
@@ -98,6 +103,16 @@ class FFT:
 
         # fft_masked = np.ma.masked_equal(fft_filtered, 0.0)
         return fft_filtered
+
+    def amp_all_harm(self, note):
+        harm_amps = []
+
+        for i in range(len(note)):
+
+            amp = self.amplitude_array[note[i]]
+            harm_amps.append(amp)
+
+        return harm_amps
 
     def run(self):
         print('Running chord finder on input file: {}'.format(self.input_file))
