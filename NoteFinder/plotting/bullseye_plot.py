@@ -106,7 +106,10 @@ def bullseye_plot(ax, data, segBold=None, cmap=None, norm=None):
     notes = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
 
     ax.set_ylim([0, 1])
-    ax.set_yticklabels(np.arange(0, 10, 1))
+
+    ax.set_yticks(np.linspace(0, 1, 11))
+    ax.set_yticklabels(range(10))
+    ax.set_xticks(np.linspace(0, 12*60*np.pi/360, 13))
     ax.set_xticklabels(notes)
 
 
@@ -147,7 +150,7 @@ cmap3.set_under('0.75')
 bounds = [2, 3, 7, 9, 15]
 norm3 = mpl.colors.BoundaryNorm(bounds, cmap3.N)
 
-fig = plt.figure(figsize=(8, 8))
+fig = plt.figure(figsize=(6, 6))
 ax = fig.add_axes([0.1, 0.1, 0.8, 0.8],
                   projection='polar', facecolor='#d5de9c')
 
