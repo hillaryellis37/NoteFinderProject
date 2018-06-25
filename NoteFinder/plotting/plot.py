@@ -40,23 +40,13 @@ rad = []
 for i in plb.arange(-1,11):
     rad = plb.append(rad, [plb.full((10), i)])
 
-
 print(len(rad))
 
 print("rad = ", rad)
 
-# w = plb.pi /4* plb.rand(q)
-# print(w)
-# print(len(w))
-# w = plb.arange(0,.6,.025)
-# print(w)
-# print(len(w))
-
 w = plb.full((120), 10)
 print("w = ", w)
 print(len(w))
-
-
 
 ba = plb.bar(t, rad, width = w)
 

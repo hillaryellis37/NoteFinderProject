@@ -60,23 +60,18 @@ def bullseye_plot(ax, data, segBold=None, cmap=None, norm=None):
     r = np.linspace(0.0, 1, 11)
     print("r= ", r)
     print(r.shape)
-    # Create the bound for the segment 17
+
     for i in range(r.shape[0]):
         ax.plot(theta, np.repeat(r[i], theta.shape), '-k', linewidth=1)
 
-    # Create the bounds for the segments  1-12
     for i in range(12):
         theta_i = i*30*np.pi/180
 
         # print("theta_i = ", theta_i)
         ax.plot([theta_i, theta_i], [r[0], 1], '-k', linewidth=.5)
 
-    # # Create the bounds for the segments 13-16
-    # for i in range():
-    #     theta_i = i*90*np.pi/180 - 45*np.pi/180
-    #     ax.plot([theta_i, theta_i], [r[0], r[1]], '-k', lw=linewidth)
+    print("norm = ",norm)
 
-    # Fill the segments 1-6
     for i in range(len(r)):
 
         r0 = r[i:i+2]
@@ -90,53 +85,28 @@ def bullseye_plot(ax, data, segBold=None, cmap=None, norm=None):
             # print("theta0 =", theta0)
             z = np.ones((64, 2))*data[i]
             # print("z = ", z)
-            ax.pcolormesh(theta0, r0, z, cmap=cmap, norm=norm)
-            # if i+1 in segBold:
-            #     ax.plot(theta0, r0, '-k', lw=linewidth+2)
-                # ax.plot(theta0[0], [r[2], r[3]], '-k', lw=linewidth+1)
-                # ax.plot(theta0[-1], [r[2], r[3]], '-k', lw=linewidth+1)
+            ax.pcolormesh(theta0, r0, z, cmap=cmap, norm=norm, alpha=0.2)
+            if i+1 in segBold:
+                ax.plot(theta0, r0, '-k', lw=linewidth+2)
+                ax.plot(theta0[0], [r[2], r[3]], '-k', lw=linewidth+1)
+                ax.plot(theta0[-1], [r[2], r[3]], '-k', lw=linewidth+1)
+    oct = 1
+    note_int = 1
 
-    # Fill the segments 7-12
-    # r0 = r[1:3]
-    # r0 = np.repeat(r0[:, np.newaxis], 128, axis=1).T
-    # for i in range(6):
-    #     # First segment start at 60 degrees
-    #     theta0 = theta[i*128:i*128+128] + 60*np.pi/180
-    #     theta0 = np.repeat(theta0[:, np.newaxis], 2, axis=1)
-    #     z = np.ones((128, 2))*data[i+6]
-    #     ax.pcolormesh(theta0, r0, z, cmap=cmap, norm=norm)
-    #     if i+7 in segBold:
-    #         ax.plot(theta0, r0, '-k', lw=linewidth+2)
-    #         ax.plot(theta0[0], [r[1], r[2]], '-k', lw=linewidth+1)
-    #         ax.plot(theta0[-1], [r[1], r[2]], '-k', lw=linewidth+1)
-    #
-    # # Fill the segments 13-16
-    # r0 = r[0:2]
-    # r0 = np.repeat(r0[:, np.newaxis], 192, axis=1).T
-    # for i in range(4):
-    #     # First segment start at 45 degrees
-    #     theta0 = theta[i*192:i*192+192] + 45*np.pi/180
-    #     theta0 = np.repeat(theta0[:, np.newaxis], 2, axis=1)
-    #     z = np.ones((192, 2))*data[i+12]
-    #     ax.pcolormesh(theta0, r0, z, cmap=cmap, norm=norm)
-    #     if i+13 in segBold:
-    #         ax.plot(theta0, r0, '-k', lw=linewidth+2)
-    #         ax.plot(theta0[0], [r[0], r[1]], '-k', lw=linewidth+1)
-    #         ax.plot(theta0[-1], [r[0], r[1]], '-k', lw=linewidth+1)
-    #
-    # # Fill the segments 17
-    # if data.size == 17:
-    #     r0 = np.array([0, r[0]])
-    #     r0 = np.repeat(r0[:, np.newaxis], theta.size, axis=1).T
-    #     theta0 = np.repeat(theta[:, np.newaxis], 2, axis=1)
-    #     z = np.ones((theta.size, 2))*data[16]
-    #     ax.pcolormesh(theta0, r0, z, cmap=cmap, norm=norm)
-    #     if 17 in segBold:
-    #         ax.plot(theta0, r0, '-k', lw=linewidth+2)
+    rind = r[oct:oct+2]
+    rind = np.repeat(rind[:, np.newaxis], 64, axis=1).T
+    theta0 = theta[note_int * 64:note_int * 64 + 64]
+    theta0 = np.repeat(theta0[:, np.newaxis], 2, axis=1)
+    # print("theta0 =", theta0)
+    z = np.ones((64, 2)) * data[note_int]
+    # print("z = ", z)
+    ax.pcolormesh(theta0, rind, z, cmap=cmap, norm=norm, alpha=1)
+
+
     notes = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
 
     ax.set_ylim([0, 1])
-    ax.set_yticklabels(np.arange(0, 10))
+    ax.set_yticklabels(np.arange(0, 10, 1))
     ax.set_xticklabels(notes)
 
 
@@ -154,77 +124,37 @@ fig.canvas.set_window_title('Left Ventricle Bulls Eyes (AHA)')
 
 
 axl = fig.add_axes([0.14, 0.15, 0.2, 0.05])
-# axl2 = fig.add_axes([0.41, 0.15, 0.2, 0.05])
-# axl3 = fig.add_axes([0.69, 0.15, 0.2, 0.05])
+axl2 = fig.add_axes([0.41, 0.15, 0.2, 0.05])
+axl3 = fig.add_axes([0.69, 0.15, 0.2, 0.05])
 
 
 # Set the colormap and norm to correspond to the data for which
 # the colorbar will be used.
-cmap = mpl.cm.viridis
-norm = mpl.colors.Normalize(vmin=1, vmax=17)
+cmap = mpl.cm.jet
+norm = mpl.colors.Normalize(vmin=1, vmax=15)
 
-# ColorbarBase derives from ScalarMappable and puts a colorbar
-# in a specified axes, so it has everything needed for a
-# standalone colorbar.  There are many more kwargs, but the
-# following gives a basic continuous colorbar with ticks
-# and labels.
-# cb1 = mpl.colorbar.ColorbarBase(axl, cmap=cmap, norm=norm,
-#                                 orientation='horizontal')
-# cb1.set_label('Some Units')
+cmap2 = mpl.cm.cool
+norm2 = mpl.colors.Normalize(vmin=1, vmax=17)
 
 
-# Set the colormap and norm to correspond to the data for which
-# the colorbar will be used.
-# cmap2 = mpl.cm.cool
-# norm2 = mpl.colors.Normalize(vmin=1, vmax=17)
-
-# ColorbarBase derives from ScalarMappable and puts a colorbar
-# in a specified axes, so it has everything needed for a
-# standalone colorbar.  There are many more kwargs, but the
-# following gives a basic continuous colorbar with ticks
-# and labels.
-# cb2 = mpl.colorbar.ColorbarBase(axl2, cmap=cmap2, norm=norm2,
-#                                 orientation='horizontal')
-# cb2.set_label('Some other units')
-
-
-# The second example illustrates the use of a ListedColormap, a
-# BoundaryNorm, and extended ends to show the "over" and "under"
-# value colors.
-# cmap3 = mpl.colors.ListedColormap(['r', 'g', 'b', 'c'])
-# cmap3.set_over('0.35')
-# cmap3.set_under('0.75')
+cmap3 = mpl.colors.ListedColormap(['r', 'g', 'b', 'c'])
+cmap3.set_over('0.35')
+cmap3.set_under('0.75')
 
 # If a ListedColormap is used, the length of the bounds array must be
 # one greater than the length of the color list.  The bounds must be
 # monotonically increasing.
-# bounds = [2, 3, 7, 9, 15]
-# norm3 = mpl.colors.BoundaryNorm(bounds, cmap3.N)
-# cb3 = mpl.colorbar.ColorbarBase(axl3, cmap=cmap3, norm=norm3,
-#                                 # to use 'extend', you must
-#                                 # specify two extra boundaries:
-#                                 boundaries=[0]+bounds+[18],
-#                                 extend='both',
-#                                 ticks=bounds,  # optional
-#                                 spacing='proportional',
-#                                 orientation='horizontal')
-# cb3.set_label('Discrete intervals, some other units')
+bounds = [2, 3, 7, 9, 15]
+norm3 = mpl.colors.BoundaryNorm(bounds, cmap3.N)
 
+fig = plt.figure(figsize=(8, 8))
+ax = fig.add_axes([0.1, 0.1, 0.8, 0.8],
+                  projection='polar', facecolor='#d5de9c')
 
-# PolarAxesSubplot(0.125,0.11;0.227941x0.77)
-# Create the 17 segment model
+bullseye_plot(ax, data, cmap=cmap, norm=norm)
 
-# print(ax[0])
-# print("map = ", cmap)
-# print("normp =", norm)
-bullseye_plot(ax[0], data, cmap=cmap, norm=norm)
-ax[0].set_title('Bulls Eye (AHA)')
-
-# bullseye_plot(ax[1], data, cmap=cmap2, norm=norm2)
-# ax[1].set_title('Bulls Eye (AHA)')
-#
-# bullseye_plot(ax[2], data, segBold=[3, 5, 6, 11, 12, 16],
-#               cmap=cmap3, norm=norm3)
-# ax[2].set_title('Segments [3,5,6,11,12,16] in bold')
+# bullseye_plot(ax[0], data, segBold=[3, 5, 6, 11, 12, 16],
+#               cmap=cmap, norm=norm)
+# ax[0].set_title('Segments [3,5,6,11,12,16] in bold')
 
 plt.show()
