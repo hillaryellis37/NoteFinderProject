@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib as mpl
-
 import matplotlib.pyplot as plt
+
 
 data = np.array(range(17)) + 1
 
@@ -21,7 +21,7 @@ class Plot:
 
         self.fig = fig
         self.ax = self.fig.add_axes([0.1, 0.1, 0.8, 0.8],
-                          projection='polar', facecolor='#d5de9c')
+                          projection='polar')
 
         self.notes = notes
         self.theta = theta
@@ -69,7 +69,7 @@ class Plot:
 
                 z = np.ones((64, 2))*data[i]
 
-                ax.pcolormesh(theta0, r0, z, cmap=cmap, norm=norm, alpha=0.1)
+                ax.pcolormesh(theta0, r0, z, cmap=cmap, norm=norm, alpha=0.05)
                 if i+1 in segBold:
                     ax.plot(theta0, r0, '-k', lw=linewidth+2)
                     ax.plot(theta0[0], [self.r[2], self.r[3]], '-k', lw=linewidth+1)
@@ -82,6 +82,7 @@ class Plot:
         ax.set_xticks(np.linspace(0, 12*60*np.pi/360, 13))
         ax.set_xticklabels(self.notes)
 
+        plt.show()
 
     def plot_amp(self, note, amp_array):
 
@@ -98,9 +99,9 @@ class Plot:
             z = np.ones((64, 2)) * data[note_pos]
 
             self.ax.pcolormesh(theta0, rind, z, cmap=self.cmap, norm=self.norm, alpha=normalized[i])
-        plt.show()
-        # self.fig.canvas.draw()
-        # plt.title(chord_name)
+        # plt.show()
+        self.fig.canvas.draw()
+        # # plt.title(chord_name)
 
     def start_plot(self):
 
