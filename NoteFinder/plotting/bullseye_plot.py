@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt
+from sklearn.preprocessing import MinMaxScaler
 
 
 data = np.array(range(17)) + 1
@@ -82,26 +83,31 @@ class Plot:
         ax.set_xticks(np.linspace(0, 12*60*np.pi/360, 13))
         ax.set_xticklabels(self.notes)
 
-        plt.show()
-
-    def plot_amp(self, note, amp_array):
-
-        note_pos = self.notes.index(note[:-1])
-        normalized = (amp_array - min(amp_array)) / (max(amp_array) - min(amp_array))
-
-        for i in range(10):
-
-            rind = self.r[i:i + 2]
-            rind = np.repeat(rind[:, np.newaxis], 64, axis=1).T
-            theta0 = self.theta[note_pos * 64:note_pos * 64 + 64]
-            theta0 = np.repeat(theta0[:, np.newaxis], 2, axis=1)
-
-            z = np.ones((64, 2)) * data[note_pos]
-
-            self.ax.pcolormesh(theta0, rind, z, cmap=self.cmap, norm=self.norm, alpha=normalized[i])
         # plt.show()
-        self.fig.canvas.draw()
+
+    def plot_amp(self, note_array, amp_array):
+        min_max_scaler = MinMaxScaler()
+        amp_normal = min_max_scaler.fit_transform(amp_array)
+
+        for j in range(note_array.shape[0]):
+            note_pos = self.notes.index(note_array[j,0][:-1])
+
+            # normalized = (amp_array - ) / (max(amp_array) - min(amp_array))
+
+            for i in range(10):
+
+                rind = self.r[i:i + 2]
+                rind = np.repeat(rind[:, np.newaxis], 64, axis=1).T
+                theta0 = self.theta[note_pos * 64:note_pos * 64 + 64]
+                theta0 = np.repeat(theta0[:, np.newaxis], 2, axis=1)
+
+                z = np.ones((64, 2)) * self.data[note_pos]
+
+                self.ax.pcolormesh(theta0, rind, z, cmap=self.cmap, norm=self.norm, alpha=amp_normal[j, i])
+        plt.show()
+        # self.fig.canvas.draw()
         # # plt.title(chord_name)
+
 
     def start_plot(self):
 
@@ -109,3 +115,5 @@ class Plot:
         self.bullseye_plot(self.ax, self.data, cmap=self.cmap, norm=self.norm)
 
         # plt.show()
+
+

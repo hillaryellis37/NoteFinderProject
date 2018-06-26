@@ -11,7 +11,7 @@ notes = ""
 def main():
 
     """
-    spectral_loudness.main() is the main command line entry point to use the spectral_loudness package.
+
     """
     # parse command line arguments
     parser = argparse.ArgumentParser(description='Analyze spectral loudness of a 48 kHz, 16-bit stereo wav file.')
@@ -42,7 +42,7 @@ def main():
 
     note_amps1 = fa_array.amp_all_harm(freq_harm1)
 
-    plot.plot_amp(note1, note_amps1)
+    # plot.plot_amp(note1, note_amps1)
 
     #create a new array with the amplitude set to masked for all frequencies within range of the note:
 
@@ -68,6 +68,18 @@ def main():
     note_amps4 = fa_array.amp_all_harm(freq_harm4)
 
     notes = note1[:-1] + " " + note2[:-1] + " " + note3[:-1]
+
+
+    #create 2d arrays all notes (in order of detected) and for amplitudes of all notes:
+
+    all_notes = np.array([[note1], [note2], [note3], [note4]])
+
+    all_amps = np.array([note_amps1, note_amps2, note_amps3, note_amps4])
+
+    plot.plot_amp(all_notes, all_amps)
+
+
+
 
     chord = fnote_converter.chord(notes)
     print(chord)
