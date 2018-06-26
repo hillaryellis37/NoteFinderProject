@@ -1,8 +1,7 @@
 import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt
-from sklearn.preprocessing import MinMaxScaler
-
+from scipy.stats import iqr
 
 data = np.array(range(17)) + 1
 
@@ -22,7 +21,7 @@ class Plot:
 
         self.fig = fig
         self.ax = self.fig.add_axes([0.1, 0.1, 0.8, 0.8],
-                          projection='polar')
+                          projection='polar', facecolor="#4B0082")
 
         self.notes = notes
         self.theta = theta
@@ -32,7 +31,7 @@ class Plot:
         # the colorbar will be used.
         self.cmap = mpl.cm.jet
         self.norm = mpl.colors.Normalize(vmin=1, vmax=15)
-
+        self.color = "#4b0082"
 
 
     def bullseye_plot(self, ax, data, segBold=None, cmap=None, norm=None):
@@ -86,8 +85,28 @@ class Plot:
         # plt.show()
 
     def plot_amp(self, note_array, amp_array):
-        min_max_scaler = MinMaxScaler()
-        amp_normal = min_max_scaler.fit_transform(amp_array)
+        # print(amp_array.shape)
+
+
+        amp_array_1d = amp_array.flatten()
+        print(min(amp_array_1d), max(amp_array_1d))
+        amp_array_1d_2 = amp_array.flatten()
+        amp_array_1d = (amp_array_1d*-1)**(1/amp_array_1d**2)
+
+
+
+        # standardized  = (amp_array_1d - np.mean(amp_array_1d)) / (max(amp_array_1d) - min(amp_array_1d))
+        # normalized2 = (standardized - min(standardized)) / (max(standardized) - min(standardized))
+        normalized = (amp_array_1d - min(amp_array_1d)) / (max(amp_array_1d) - min(amp_array_1d))
+        normalized2 = (amp_array_1d_2 - min(amp_array_1d_2)) / (max(amp_array_1d_2) - min(amp_array_1d_2))
+
+
+        # print(amp_array_1d)
+        normalized = normalized.reshape(amp_array.shape)
+        normalized2 = normalized2.reshape(amp_array.shape)
+
+        print(normalized[0])
+        print(normalized2[0])
 
         for j in range(note_array.shape[0]):
             note_pos = self.notes.index(note_array[j,0][:-1])
@@ -103,7 +122,21 @@ class Plot:
 
                 z = np.ones((64, 2)) * self.data[note_pos]
 
-                self.ax.pcolormesh(theta0, rind, z, cmap=self.cmap, norm=self.norm, alpha=amp_normal[j, i])
+                if normalized2[j,i] > .7:
+                    self.color = "red"
+                elif normalized2[j,i] > .65:
+                    self.color = "#FF4500"
+                elif normalized2[j,i] > .5:
+                    self.color = "yellow"
+                elif normalized2[j,i] > .4:
+                    self.color = "#00FF00"
+                # elif normalized2[j,i] > .3:
+                #     self.color = "#00FFFF"
+                else:
+                    self.color = "#00FFFF"
+
+
+                self.ax.pcolormesh(theta0, rind, z, color=self.color, norm=self.norm, alpha=normalized[j, i])
         plt.show()
         # self.fig.canvas.draw()
         # # plt.title(chord_name)
