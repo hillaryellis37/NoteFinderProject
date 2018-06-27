@@ -5,7 +5,7 @@ from NoteFinder.audio.freq_to_note_converter import Note
 from NoteFinder.plotting.bullseye_plot import Plot
 
 
-wav_file_test = './NoteFinder/media/Gmaj.wav'
+wav_file_test = './NoteFinder/media/Gmaj_short.wav'
 notes = ""
 
 

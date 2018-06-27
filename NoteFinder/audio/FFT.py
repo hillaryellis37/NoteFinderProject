@@ -48,7 +48,7 @@ class FFT:
 
 
         for i in np.arange(1, 20001):
-            self.amplitude_array = np.append(self.amplitude_array, np.array([(10 * log10(self.fft_out)[np.searchsorted(self.freqArray, i)+3])]))
+            self.amplitude_array = np.append(self.amplitude_array, np.array([(10 * log10(self.fft_out)[np.searchsorted(self.freqArray, i)])]))
 
         self.amplitude_array = np.around(self.amplitude_array, decimals=5)
 
