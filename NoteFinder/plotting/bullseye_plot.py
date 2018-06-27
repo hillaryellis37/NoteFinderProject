@@ -21,7 +21,7 @@ class Plot:
 
         self.fig = fig
         self.ax = self.fig.add_axes([0.1, 0.1, 0.8, 0.8],
-                          projection='polar')
+                          projection='polar', facecolor="#E8E8E8")
 
         self.notes = notes
         self.theta = theta
@@ -97,7 +97,7 @@ class Plot:
         amp_array_1d = amp_array.flatten()
 
         amp_array_1d_2 = amp_array.flatten()
-        amp_array_1d = (amp_array_1d*-1)**(1/amp_array_1d**2)
+        amp_array_1d = (amp_array_1d*-1)**(amp_array_1d*-1/((amp_array_1d*-30)**2))
 
 
 
@@ -128,29 +128,29 @@ class Plot:
                 theta0 = self.theta[note_pos * 64:note_pos * 64 + 64]
                 theta0 = np.repeat(theta0[:, np.newaxis], 2, axis=1)
 
-                if normalized2[j,i] > .80:
+                if normalized[j,i] > .7:
                     z = np.ones((64, 2)) * (self.data[11], self.data[note_pos])
-                elif normalized2[j,i] > .7:
+                elif normalized[j,i] > .45:
                     z = np.ones((64, 2)) * (self.data[10], self.data[note_pos])
-                elif normalized2[j,i] > .67:
+                elif normalized[j,i] > .4:
                     z = np.ones((64, 2)) * (10, self.data[note_pos])
-                elif normalized2[j,i] > .63:
+                elif normalized[j,i] > .38:
                     z = np.ones((64, 2)) * (9, self.data[note_pos])
-                elif normalized2[j,i] > .6:
+                elif normalized[j,i] > .36:
                     z = np.ones((64, 2)) * (8, self.data[note_pos])
-                elif normalized2[j,i] > .55:
+                elif normalized[j,i] > .34:
                     z = np.ones((64, 2)) * (7, self.data[note_pos])
-                elif normalized2[j,i] > .5:
+                elif normalized[j,i] > .31:
                     z = np.ones((64, 2)) * (6, self.data[note_pos])
-                elif normalized2[j,i] > .45:
+                elif normalized[j,i] > .28:
                     z = np.ones((64, 2)) * (5, self.data[note_pos])
-                elif normalized2[j,i] > .35:
+                elif normalized[j,i] > .25:
                     z = np.ones((64, 2)) * (4,self.data[note_pos])
-                elif normalized2[j,i] > .25:
+                elif normalized[j,i] > .2:
                     z = np.ones((64, 2)) * (3, self.data[note_pos])
-                elif normalized2[j,i] > .15:
+                elif normalized[j,i] > .15:
                     z = np.ones((64, 2)) * (2, self.data[note_pos])
-                elif normalized2[j,i] > .1:
+                elif normalized[j,i] > .1:
                     z = np.ones((64, 2)) * (1, self.data[note_pos])
                 else:
                     z = np.ones((64, 2)) * (0, self.data[note_pos])
@@ -169,7 +169,7 @@ class Plot:
                 #     self.color = "white"
 
 
-                self.ax.pcolormesh(theta0, rind, z, cmap=self.cmap, norm=self.norm, alpha=normalized2[j,i])
+                self.ax.pcolormesh(theta0, rind, z, cmap=self.cmap, norm=self.norm, alpha=normalized[j,i])
         plt.show()
         # self.fig.canvas.draw()
         # # plt.title(chord_name)
