@@ -68,8 +68,8 @@ class FFT:
         freq_max = np.argmax(amp_array)
         amplitude = amp_array[freq_max]
 
-        print("The frequency is {} Hz".format(freq_max))
-        print("The amplitude is {} Hz".format(amplitude))
+        # print("The frequency is {} Hz".format(freq_max))
+        # print("The amplitude is {} Hz".format(amplitude))
 
         return freq_max, amplitude
 

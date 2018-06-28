@@ -5,7 +5,7 @@ from NoteFinder.audio.freq_to_note_converter import Note
 from NoteFinder.plotting.bullseye_plot import Plot
 
 
-wav_file_test = './NoteFinder/media/light_synth.wav'
+wav_file_test = './NoteFinder/media/Gmaj_short.wav'
 notes = ""
 
 
@@ -22,6 +22,8 @@ def main():
 
     args = parser.parse_args()
 
+    # print(args.input_file)
+
     # create Plot object:
     plot = Plot()
 
@@ -29,8 +31,8 @@ def main():
     plot.start_plot()
 
     # create FFT object
-    # fa_array= FFT(input_file=args.input_file)
-    fa_array = FFT(input_file=wav_file_test)
+    fa_array= FFT(input_file=args.input_file)
+    # fa_array = FFT(input_file=wav_file_test)
 
     # create Note object
     fnote_converter = Note()
@@ -72,19 +74,19 @@ def main():
     note11, note_amps11, amp_array12 = process_audio_stats(amp_array=amp_array11)
     note12, note_amps12, amp_array13 = process_audio_stats(amp_array=amp_array12)
 
-    str_notes = note1[:-1] + " " + note2[:-1] + " " + note3[:-1] + " " + note4[:-1]
-    print(notes)
-    chord_notes = [note1[:-1], note2[:-1], note3[:-1], note4[:-1]]
+    str_notes = note1[:-1] + " " + note2[:-1] + " " + note3[:-1]
+
+    chord_notes = [note1[:-1], note2[:-1], note3[:-1]]
+
     ## create 2d arrays all notes (in order of detected) and for amplitudes of all notes:
 
     all_notes = np.array([[note1], [note2], [note3], [note4], [note5], [note6], [note7], [note8], [note9], [note10], [note11], [note12]])
 
     all_amps = np.array([note_amps1, note_amps2, note_amps3, note_amps4, note_amps5, note_amps6, note_amps7, note_amps8, note_amps9, note_amps10, note_amps11, note_amps12])
 
-
     ## input 3 highest notes found to get chord:
     chord = fnote_converter.chord(str_notes)
-    print(chord)
+
 
     plot.plot_amp(all_notes, all_amps, wav_file_test.split("/")[-1], chord_str=chord, note_list=chord_notes)
 

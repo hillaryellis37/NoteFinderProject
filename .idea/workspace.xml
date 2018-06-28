@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d0f96d77-43db-44e7-b094-c9b192a8ddb6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/NoteFinder/audio/FFT.py" afterPath="$PROJECT_DIR$/NoteFinder/audio/FFT.py" />
+      <change beforePath="$PROJECT_DIR$/NoteFinder/audio/freq_to_note_converter.py" afterPath="$PROJECT_DIR$/NoteFinder/audio/freq_to_note_converter.py" />
       <change beforePath="$PROJECT_DIR$/NoteFinder/plotting/bullseye_plot.py" afterPath="$PROJECT_DIR$/NoteFinder/plotting/bullseye_plot.py" />
       <change beforePath="$PROJECT_DIR$/note_finder.py" afterPath="$PROJECT_DIR$/note_finder.py" />
     </list>
@@ -17,7 +19,7 @@
     <SUITE FILE_PATH="coverage/NoteFinderProject$run_FFT.coverage" NAME="run_FFT Coverage Results" MODIFIED="1529789290564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NoteFinder/audio" />
     <SUITE FILE_PATH="coverage/NoteFinderProject$run_plot_practice.coverage" NAME="run_plot_practice Coverage Results" MODIFIED="1529904607996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NoteFinder/plotting" />
     <SUITE FILE_PATH="coverage/NoteFinderProject$run_freq_to_note.coverage" NAME="run_freq_to_note Coverage Results" MODIFIED="1529784770077" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NoteFinder/audio" />
-    <SUITE FILE_PATH="coverage/NoteFinderProject$run_main.coverage" NAME="run_main Coverage Results" MODIFIED="1530087330942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NoteFinderProject$run_main.coverage" NAME="run_main Coverage Results" MODIFIED="1530141847180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/NoteFinderProject$run_bullseye.coverage" NAME="run_bullseye Coverage Results" MODIFIED="1529975115868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NoteFinder/plotting" />
     <SUITE FILE_PATH="coverage/FrequencyExtractor$run_note_converter.coverage" NAME="run_note_converter Coverage Results" MODIFIED="1529044741557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/NoteFinderProject$run_fft2.coverage" NAME="run_freq_to_note Coverage Results" MODIFIED="1529344474290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NoteFinder/audio" />
@@ -45,8 +47,8 @@
       <file leaf-file-name="FFT.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NoteFinder/audio/FFT.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="26" column="40" lean-forward="false" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+            <state relative-caret-position="225">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding>
                 <element signature="e#1#19#0" expanded="true" />
               </folding>
@@ -54,14 +56,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="note_finder.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="note_finder.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/note_finder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="88" column="66" lean-forward="false" selection-start-line="88" selection-start-column="66" selection-end-line="88" selection-end-column="66" />
+            <state relative-caret-position="1305">
+              <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
-                <marker date="1530085976680" expanded="true" signature="714:2194" ph="..." />
+                <marker date="1530152138079" expanded="true" signature="741:2223" ph="..." />
               </folding>
             </state>
           </provider>
@@ -79,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bullseye_plot.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bullseye_plot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NoteFinder/plotting/bullseye_plot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1546">
-              <caret line="21" column="55" lean-forward="false" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -130,8 +132,8 @@
       <file leaf-file-name="freq_to_note_converter.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NoteFinder/audio/freq_to_note_converter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="70" column="38" lean-forward="false" selection-start-line="70" selection-start-column="38" selection-end-line="70" selection-end-column="38" />
+            <state relative-caret-position="1170">
+              <caret line="78" column="15" lean-forward="false" selection-start-line="78" selection-start-column="10" selection-end-line="78" selection-end-column="15" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -163,7 +165,6 @@
       <find>q</find>
       <find>input_freq</find>
       <find>size</find>
-      <find>print</find>
       <find>cmap</find>
       <find>viri</find>
       <find>norm</find>
@@ -173,6 +174,7 @@
       <find>data</find>
       <find>alpha</find>
       <find>legend</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -190,10 +192,10 @@
         <option value="$PROJECT_DIR$/NoteFinder/plotting/plot.py" />
         <option value="$PROJECT_DIR$/NoteFinder/plotting/__init__.py" />
         <option value="$PROJECT_DIR$/NoteFinder/plotting/plot_practice.py" />
-        <option value="$PROJECT_DIR$/NoteFinder/audio/FFT.py" />
-        <option value="$PROJECT_DIR$/NoteFinder/audio/freq_to_note_converter.py" />
-        <option value="$PROJECT_DIR$/note_finder.py" />
         <option value="$PROJECT_DIR$/NoteFinder/plotting/bullseye_plot.py" />
+        <option value="$PROJECT_DIR$/NoteFinder/audio/freq_to_note_converter.py" />
+        <option value="$PROJECT_DIR$/NoteFinder/audio/FFT.py" />
+        <option value="$PROJECT_DIR$/note_finder.py" />
       </list>
     </option>
   </component>
@@ -204,10 +206,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-41" />
-    <option name="y" value="23" />
+    <option name="x" value="190" />
+    <option name="y" value="184" />
     <option name="width" value="1680" />
-    <option name="height" value="967" />
+    <option name="height" value="621" />
   </component>
   <component name="ProjectView">
     <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
@@ -479,18 +481,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-41" y="23" width="1680" height="967" extended-state="0" />
+    <frame x="190" y="184" width="1680" height="621" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294979" sideWeight="0.497558" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.916318" sideWeight="0.23199023" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32902467" sideWeight="0.60169494" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.60169494" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982457" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982457" sideWeight="0.495116" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.39181286" sideWeight="0.3983051" order="3" side_tool="true" content_ui="tabs" x="28" y="339" width="1652" height="333" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22222222" sideWeight="0.4958159" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.36984688" sideWeight="0.492674" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.7197802" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" x="1059" y="589" width="1017" height="613" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7197802" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" x="1059" y="589" width="1017" height="613" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2475787" sideWeight="0.49345794" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3988304" sideWeight="0.497558" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2475787" sideWeight="0.506542" order="0" side_tool="true" content_ui="tabs" />
@@ -929,43 +932,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NoteFinder/audio/FFT.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="26" column="40" lean-forward="false" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
-          <folding>
-            <element signature="e#1#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NoteFinder/plotting/plot_practice.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-84">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#1#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NoteFinder/audio/freq_to_note_converter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="70" column="38" lean-forward="false" selection-start-line="70" selection-start-column="38" selection-end-line="70" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/note_finder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="88" column="66" lean-forward="false" selection-start-line="88" selection-start-column="66" selection-end-line="88" selection-end-column="66" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <marker date="1530085976680" expanded="true" signature="714:2194" ph="..." />
           </folding>
         </state>
       </provider>
@@ -980,12 +952,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/NoteFinder/audio/freq_to_note_converter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="78" column="15" lean-forward="false" selection-start-line="78" selection-start-column="10" selection-end-line="78" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NoteFinder/audio/FFT.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#1#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/NoteFinder/plotting/bullseye_plot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1546">
-          <caret line="21" column="55" lean-forward="false" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/note_finder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1305">
+          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1530152138079" expanded="true" signature="741:2223" ph="..." />
           </folding>
         </state>
       </provider>
