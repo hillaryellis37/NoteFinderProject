@@ -32,14 +32,8 @@ scipy.fftpack.fft
 matplotlib.pyplot
 music21
 
+To Run Notefinder:
 
-Proposed python module outline:
+python note_finder.py -i'/path/to/file.wav'
 
-audio
-freq to note conversion module
-fft
-media
-all audio samples: planning to test with .wav files of acoustic nylon string guitar samples
-plotting
-plots
 
