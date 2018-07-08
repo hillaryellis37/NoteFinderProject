@@ -34,7 +34,7 @@ music21
 
 To Run Notefinder:
 
-python note_finder.py -i'/path/to/file.wav'
+python note_finder.py -i '/path/to/file.wav'
 
 Please note: the program will only work with .wav files of 1 second in length max
 
